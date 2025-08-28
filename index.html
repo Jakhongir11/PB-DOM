@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>ПУБЛИЧНЫЙ ДОМ — CS 1.6 Сервер</title>
+  <meta name="description" content="Мини-сайт сервера CS 1.6 — ПУБЛИЧНЫЙ ДОМ. IP, подключение, правила, контакты и онлайн-виджет Tsarvar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple crosshair icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8"></circle>
+            <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+          </svg>
+        </div>
+        <span>ПУБЛИЧНЫЙ ДОМ — CS 1.6</span>
+      </div>
+      <nav class="menu" aria-label="Главное меню">
+        <a class="active" href="#home">Главная</a>
+        <a href="#stats">Статистика</a>
+        <a href="#rules">Правила</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container hero-wrap">
+      <div class="hero-card">
+        <div class="badge" title="CS 1.6 сервер">
+          <span>💥 Онлайн-шутер</span>
+          <span>•</span>
+          <span>Steam + Non-Steam</span>
+        </div>
+        <h1>ПУБЛИЧНЫЙ ДОМ</h1>
+        <p class="subtitle">Залетай к нам: дружелюбная атмосфера, честная игра, адекватная админка.</p>
+
+        <div class="ip-block">
+          <div class="ip" id="ip-text" data-ip="95.181.158.151:27111">95.181.158.151:27111</div>
+          <button class="btn" id="copy-btn" aria-label="Скопировать IP">Скопировать</button>
+          <a class="btn primary" id="connect-btn" href="steam://connect/95.181.158.151:27111">Подключиться</a>
+        </div>
+        <div class="note">IP можно менять прямо в коде. Кнопка «Подключиться» открывает <code>steam://connect</code>.</div>
+
+        <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap">
+          <a class="btn" href="#stats">Смотреть статистику</a>
+          <a class="btn" href="#rules">Правила сервера</a><a class="btn" href="#contacts">Наши контакты</a>
+          <a class="btn" href="#download">Скачать CS 1.6</a>
+        </div>
+      </div>
+
+      <div class="poster" aria-hidden="true">
+        <div class="banner"></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="stats">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2 style="margin-top:0">Виджет онлайн (Tsarvar)</h2>
+        <div class="widget">
+      <!-- TSARVAR WIDGET -->
+<a href="https://tsarvar.com/servers/counter-strike-1.6/95.181.158.151:27111" data-tsarvarServerId="442296">Сервер ПУБЛИЧНЫЙ █ ДОМ</a>
+<script type="text/javascript" charset="utf-8" src="https://widget.tsarvar.com/load.js?v=2"></script>
+<script type="text/javascript">
+    (function(k){(window[k]||(window[k]=[])).push({
+        element:'*[data-tsarvarServerId="442296"]',
+        serverId:442296,
+        serverIp:'95.181.158.151',
+        serverPort:27111,
+        color:'#131c25'
+    });})('TsarvarWidgetQueue');
+</script>
+<!-- /TSARVAR WIDGET -->
+          <p>Здесь будет отображаться онлайн-виджет от Tsarvar.<br/>
+            Вставь их <b>iframe</b> в этот блок, чтобы показать текущую карту, игроков и пинг.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="download">
+        <h2 style="margin-top:0">Скачать CS 1.6</h2>
+        <p class="subtitle">Скачать CS 1.6 бесплатно — Русская версия КС 1.6</p>
+        <p class="note">Поддерживаются Steam и Non‑Steam клиенты.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn" href="#" onclick="alert('Замени ссылку на свою сборку/Google Drive.'); return false;">Скачать сборку</a>
+          <a class="btn" href="#" onclick="alert('Замени ссылку на патч/инструкцию.'); return false;">Патч / инструкция</a>
+        </div>
+        <p>Скачать КС 1.6 – проще простого! Разве есть сегодня человек на Земле, который не знал бы эту игру? Counter-Strike 1.6 до сих пор остается одним из любимых увлечением для миллионов людей по всему Миру. Игра стала основой для множества других шутеров и продолжа...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="container grid">
+      <div class="card">
+        <h2 style="margin-top:0">Правила сервера</h2>
+        <ul class="rules">
+          <li>🚫 Читы/скрипты — моментальный бан.</li>
+          <li>🗣️ Оскорбления, спам, реклама — мут/бан.</li>
+          <li>🤝 Уважай игроков и админов. Играем по-человечески.</li>
+          <li>🎧 Микрофон без шума/музыки; саундборды запрещены.</li>
+          <li>🎯 Игра по целям карты; не мешай тиммейтам.</li>
+          <li>📌 Админы оставляют за собой право на финальное решение.</li>
+        </ul>
+        <p class="note">Нарушения фиксируй скриншотами/демо и отправляй админам в контактах ниже.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2 style="margin-top:0">Контакты</h2>
+        <p class="subtitle">Наши соцсети и связь с админами.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn" href="#" onclick="alert('Вставь ссылку на Discord.'); return false;">Discord</a>
+          <a class="btn" href="#" onclick="alert('Вставь ссылку на VK или Telegram.'); return false;">VK / Telegram</a>
+          <a class="btn" href="mailto:admin@example.com">Email админки</a>
+        </div>
+        <p class="note">Заявки на админку и жалобы отправляй с доказательствами (ID, скрины, демо).</p>
+      </div>
+
+      <div class="card">
+        <h2 style="margin-top:0">О сервере</h2>
+        <p>ПУБЛИЧНЫЙ ДОМ — активная комьюнити CS 1.6. Мы поддерживаем честную игру, регулярно следим за порядком и обновляем сервер. Заходи, играй, зови друзей!</p>
+        <ul class="rules">
+          <li>Локации: классика (de_dust2, de_inferno, cs_assault, и т.д.)</li>
+          <li>Плагины: античит, админка, баланс команд, карты по голосованию</li>
+          <li>Регулярные эвенты и мини-турниры</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> ПУБЛИЧНЫЙ ДОМ • Сделано с любовью к 1.6
+    </div>
+  </footer>
+
+  <script>
+    // динамический год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // копирование IP
+    const copyBtn = document.getElementById('copy-btn');
+    const ipText = document.getElementById('ip-text');
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(ipText.textContent.trim());
+        copyBtn.textContent = 'Скопировано!';
+        setTimeout(() => (copyBtn.textContent = 'Скопировать'), 1500);
+      } catch (e) {
+        alert('Не удалось скопировать. Скопируй вручную: ' + ipText.textContent.trim());
+      }
+    });// если ты поменяешь IP в data-ip, ссылка steam обновится сама
+    const connectBtn = document.getElementById('connect-btn');
+    const updateConnectLink = () => {
+      const ip = (ipText.getAttribute('data-ip') || ipText.textContent).trim();
+      connectBtn.href = 'steam://connect/' + ip;
+    };
+    updateConnectLink();
+
+    // Пример: чтобы на лету поменять IP без правки HTML-текста:
+    // ipText.textContent = '1.2.3.4:27015'; ipText.setAttribute('data-ip','1.2.3.4:27015'); updateConnectLink();
+
+    // плавный скролл по якорям (для старых браузеров можно убрать)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) {
+            e.preventDefault();
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

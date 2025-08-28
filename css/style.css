@@ -98,6 +98,7 @@
     .hero { 
       padding: 48px 0 32px; 
     }
+
     .hero-wrap { 
       display: grid; 
       grid-template-columns: 1.2fr 1fr; 
@@ -110,7 +111,9 @@
       padding: 7px; 
       box-shadow: var(--shadow); 
       height: 350px;
+      max-width: 100%;
     }
+
     h1 { 
       margin: 14px 0 8px; 
       font-size: clamp(24px, 5vw, 40px); 
@@ -175,10 +178,85 @@
       background: radial-gradient(350px 200px at 25% 30%, rgba(124,247,161,.08), transparent 60%), radial-gradient(350px 250px at 85% 20%, rgba(138,180,255,.12), transparent 60%), linear-gradient(180deg, #0f1522, #0b0f16); 
       position: relative; 
     }
+    /* Общие стили слайдера */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Стрелки управления */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.controls span {
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.controls span:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .slider {
+    height: 300px;
+  }
+  .controls span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 200px;
+  }
+  .controls span {
+    font-size: 1.2rem;
+  }
+}
 
     section { 
       padding: 32px 0; 
     }
+
     .card {
        background: #0f1522; 
        border: 1px solid var(--border); 

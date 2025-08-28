@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
   <header>
@@ -58,7 +59,55 @@
       </div>
 
       <div class="poster" aria-hidden="true">
-        <div class="banner"></div>
+        <div class="banner">
+
+          <!-- Слайд-баннер -->
+          <div class="slider">
+            <div class="slides">
+              <div class="slide active" style="background-image: url(./img/IMG_2097.PNG);"></div>
+              <div class="slide" style="background-image: url(./img/photo_2025-08-28_15-46-58.jpg);"></div>
+              <div class="slide" style="background-image: url(./img/IMG_2098.PNG);"></div>
+              <div class="slide" style="background-image: url(./img/578e8cf476d6d.jpg);"></div>
+              <div class="slide" style="background-image: url(./img/929971821.jpg);"></div>
+            </div>
+
+            <div class="controls">
+              <span class="prev">&#10094;</span>
+              <span class="next">&#10095;</span>
+            </div>
+          </div>
+
+<script>
+// Скрипт переключения слайдов
+const slides = document.querySelectorAll('.slide');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+prev.addEventListener('click', () => {
+  current = (current === 0) ? slides.length - 1 : current - 1;
+  showSlide(current);
+});
+
+next.addEventListener('click', () => {
+  current = (current === slides.length - 1) ? 0 : current + 1;
+  showSlide(current);
+});
+
+// Автопрокрутка каждые 5 секунд
+setInterval(() => {
+  current = (current === slides.length - 1) ? 0 : current + 1;
+  showSlide(current);
+}, 5000);
+</script>
+
+
+        </div>
       </div>
     </div>
   </main>

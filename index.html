@@ -6,6 +6,7 @@
   <title>ПУБЛИЧНЫЙ ДОМ — CS 1.6 Сервер</title>
   <meta name="description" content="Мини-сайт сервера CS 1.6 — ПУБЛИЧНЫЙ ДОМ. IP, подключение, правила, контакты и онлайн-виджет Tsarvar." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="./img/Counter_Strike_22933.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
@@ -41,15 +42,14 @@
           <span>•</span>
           <span>Steam + Non-Steam</span>
         </div>
-        <h1>ПУБЛИЧНЫЙ ДОМ</h1>
+        <h1>ПУБЛИЧНЫЙ <span class="pb-dom">ДОМ</span></h1>
         <p class="subtitle">Залетай к нам: дружелюбная атмосфера, честная игра, адекватная админка.</p>
 
         <div class="ip-block">
           <div class="ip" id="ip-text" data-ip="95.181.158.151:27111">95.181.158.151:27111</div>
-          <button class="btn" id="copy-btn" aria-label="Скопировать IP">Скопировать</button>
-          <br>
-          <a class="btn primary" id="connect-btn" href="steam://connect/95.181.158.151:27111">Подключиться</a>
         </div>
+           <button class="btn" id="copy-btn" aria-label="Скопировать IP">Скопировать</button>
+          <a class="btn primary" id="connect-btn" href="steam://connect/95.181.158.151:27111">Подключиться</a>
         <div class="note">IP можно менять прямо в коде. Кнопка «Подключиться» открывает <code>steam://connect</code>.</div>
 
         <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap">
@@ -65,11 +65,17 @@
           <!-- Слайд-баннер -->
           <div class="slider">
             <div class="slides">
-              <div class="slide active" style="background-image: url(./img/IMG_2097.PNG);"></div>
-              <div class="slide" style="background-image: url(./img/photo_2025-08-28_15-46-58.jpg);"></div>
-              <div class="slide" style="background-image: url(./img/IMG_2098.PNG);"></div>
-              <div class="slide" style="background-image: url(./img/578e8cf476d6d.jpg);"></div>
-              <div class="slide" style="background-image: url(./img/929971821.jpg);"></div>
+              <div class="slide active" style="background-image: url(./img/578e8cf476d6d.jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs-1-6-hitman.avif);"></div>
+              <div class="slide" style="background-image: url(./img/cs.jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ 0.jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ \(2\).jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ \(3\).jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ \(4\).jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ \(6\).jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ \(7\).jpg);"></div>
+              <div class="slide" style="background-image: url(./img/cs\ \(8\).jpg);"></div>
+              <div class="slide" style="background-image: url(./img/IMG_2097.PNG);"></div>
             </div>
 
             <div class="controls">
@@ -107,31 +113,31 @@ setInterval(() => {
 }, 5000);
 </script>
 
-
         </div>
       </div>
     </div>
   </main>
 
-  <section id="stats">
+  <section id="stats" class="stats">
     <div class="container grid grid-2">
       <div class="card">
         <h2 style="margin-top:0">Мониторинг</h2>
         <div class="widget">
-      <!-- TSARVAR WIDGET -->
-      <a href="https://tsarvar.com/servers/counter-strike-1.6/95.181.158.151:27111" data-tsarvarServerId="442296">Сервер ПУБЛИЧНЫЙ █ ДОМ</a>
-      <script type="text/javascript" charset="utf-8" src="https://widget.tsarvar.com/load.js?v=2"></script>
-      <script type="text/javascript">
-      (function(k){(window[k]||(window[k]=[])).push({
-          element:'*[data-tsarvarServerId="442296"]',
-          serverId:442296,
-          serverIp:'95.181.158.151',
-          serverPort:27111,
-          color:'#131c25'
-      });})('TsarvarWidgetQueue');
-    </script>
-    <!-- /TSARVAR WIDGET -->
-         
+
+            <!-- TSARVAR WIDGET -->
+            <a href="https://tsarvar.com/servers/counter-strike-1.6/95.181.158.151:27111" data-tsarvarServerId="442296">Сервер ПУБЛИЧНЫЙ █ ДОМ</a>
+            <script type="text/javascript" charset="utf-8" src="https://widget.tsarvar.com/load.js?v=2"></script>
+            <script type="text/javascript">
+            (function(k){(window[k]||(window[k]=[])).push({
+                element:'*[data-tsarvarServerId="442296"]',
+                serverId:442296,
+                serverIp:'95.181.158.151',
+                serverPort:27111,
+                color:'#131c25'
+            });})('TsarvarWidgetQueue');
+          </script>
+          <!-- /TSARVAR WIDGET -->
+
         </div>
       </div>
 
@@ -144,8 +150,8 @@ setInterval(() => {
           <a class="btn btn_torrent" href="https://all-cs.ru/sborki/CS16_Setup.torrent">СКАЧАТЬ ТОРРЕНТ</a>
         </div>
         <br>
-        <p class="note">Поддерживаются Steam и Non‑Steam клиенты.</p>
-        <p>Скачать КС 1.6 – проще простого! Разве есть сегодня человек на Земле, который не знал бы эту игру? Counter-Strike 1.6 до сих пор остается одним из любимых увлечением для миллионов людей по всему Миру. Игра стала основой для множества других шутеров и продолжа...</p>
+        <h4 class="note">Поддерживаются Steam и Non‑Steam клиенты.</h4>
+        <p>Скачать КС 1.6 – проще простого! Разве есть сегодня человек на Земле, который не знал бы эту игру? Counter-Strike 1.6 до сих пор остается одним из любимых увлечением для миллионов людей по всему Миру. Игра стала основой для множества других шутеров и продолжает вдохновлять раз...</p>
       </div>
     </div>
   </section>

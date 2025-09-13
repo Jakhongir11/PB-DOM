@@ -1,0 +1,167 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #0a0f2c, #1a0033, #2a003f, #400000, #990000);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .logo-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .logo-card:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+    }
+
+    .logo-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background: linear-gradient(90deg, #ff8a00, #e52e71);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      opacity: 0.85;
+    }
+
+
+    header { 
+      width: 100%;
+      /* position: sticky;  */
+      top:0; z-index:50;
+      backdrop-filter: saturate(1.2) blur(10px); 
+      background: linear-gradient(180deg, rgba(11,15,22,.85), rgba(11,15,22,.6)); border-bottom: 1px solid var(--border); 
+    }
+    .nav { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center;
+      padding: 12px 0; 
+    }
+    .brand { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      font-weight: 800; 
+      letter-spacing: 0.5px; 
+      font-size: 1rem; 
+      font-size: 15px;
+      margin-right: 10px;
+    }
+    .logo { 
+      width: 36px; 
+      height: 36px; 
+      border-radius: 10px; 
+      background: linear-gradient(135deg, #1b2536, #152036); 
+      display: grid; 
+      place-items: center; 
+      box-shadow: var(--shadow); 
+      border: 1px solid var(--border); 
+    }
+    .logo svg { 
+      width: 22px; 
+      height: 22px; 
+      opacity: .9; 
+    }
+
+    .menu { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 12px; 
+      margin-top: 8px; 
+    }
+    .menu a { 
+      color: var(--muted); 
+      font-weight: 600; 
+      padding: 6px; 
+      border-radius: 10px; 
+      text-decoration: none;
+    }
+    .menu a:hover, .menu a.active { 
+      color: var(--text); 
+      background: #121a2b; 
+    }
+    
+   
+  
+    .ava {
+      text-align: center;
+      padding: 10px;
+      color: white;
+      border: 1px solid;
+      border-image-slice: 1;
+      border-width: 5px;
+      border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+      animation: borderAnimation 3s linear infinite;
+  }
+
+  @keyframes borderAnimation {
+    0% {
+      border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    }
+    25% {
+      border-image-source: linear-gradient(45deg, #00ff00, #0000ff, #ff00ff, #ff0000);
+    }
+    50% {
+      border-image-source: linear-gradient(45deg, #0000ff, #ff00ff, #ff0000, #00ff00);
+    }
+    75% {
+      border-image-source: linear-gradient(45deg, #ff00ff, #ff0000, #00ff00, #0000ff);
+    }
+    100% {
+      border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+    }
+  }
+
+  footer { 
+    border-top: 1px solid var(--border); 
+    padding: 24px 0; color: var(--muted); 
+    text-align: center; font-size: 0.85rem; 
+    margin-top: 15px;
+    opacity: 0.7;
+  }
